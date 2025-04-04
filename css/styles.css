@@ -1,0 +1,419 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+    display: none; /* Hidden by default on large screens */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Navigation Menu (Default) */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row; /* Horizontal menu on large screens */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the link */
+}
+
+nav ul li a i {
+    margin-right: 8px; /* Space between icon and text */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover i {
+    color: #ffcc00; /* Change icon color on hover */
+}
+
+section {
+    padding: 50px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%; /* Makes it a circle */
+    margin-right: 20px; /* Adds space between image and text */
+    border: 3px solid #007bff;
+    object-fit: cover;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #222;
+    color: #ffffff;
+}
+
+.dark-mode section {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode header {
+    background: #111;
+}
+
+.dark-mode #education {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode .education-entry {
+    background-color: #444; /* Darker background for education entries */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.dark-mode #education #resume {
+    background-color: #444;
+    color: white;
+}
+
+/* Dark mode for project section */
+.dark-mode #projects {
+    background-color: #333; /* Darker background for the section */
+    color: white;
+}
+
+.dark-mode #projects h2 {
+    color: white;
+}
+
+/* Dark mode for project cards */
+.dark-mode .project-card {
+    background-color: #444; /* Darker background for project cards */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Light glow effect */
+}
+
+/* Dark mode for buttons */
+.dark-mode .project-buttons a {
+    background-color: #555; /* Darker buttons */
+    color: white;
+    border: 1px solid #777;
+}
+
+/* Dark mode hover effect */
+.dark-mode .project-buttons a:hover {
+    background-color: #666;
+    color: #ddd;
+}
+
+/* Dark Mode Button */
+#dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #ffcc00;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Educational Background Section */
+#education {
+    padding: 50px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-entry {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 4px solid #007bff;
+    background: #f9f9f9;
+    padding-left: 15px;
+}
+
+#resume {
+    margin-top: 30px;
+    text-align: center;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Skills & Interests Sections */
+.skills-list, .interests-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.skills-list li, .interests-list li {
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.skills-list li i, .interests-list li i {
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 20px;
+}
+
+/* Project Section */
+#projects {
+    padding: 50px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    max-width: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#projects.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Projects Container */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Project Card */
+.project-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Project Buttons */
+.project-buttons {
+    margin-top: 15px;
+}
+
+.project-buttons a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.github-btn {
+    background-color: #333;
+    color: white;
+}
+
+.github-btn:hover {
+    background-color: #555;
+}
+
+.demo-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.demo-btn:hover {
+    background-color: #0056b3;
+}
+
+/* General Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    width: 100%;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.social-links {
+    margin: 10px 0;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffcc00;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger button */
+    }
+
+    nav ul {
+        display: none; /* Hide menu by default */
+        flex-direction: column; /* Stack menu items */
+        background: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000; /* Ensure menu is above other content */
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    nav ul li {
+        padding: 15px 0;
+    }
+
+     /* Fix dark mode button positioning */
+     #dark-mode-toggle {
+        position: relative; /* Allow it to be pushed down */
+        margin-top: 80px; /* Push it down below the expanded menu */
+        z-index: 999; /* Ensure it stays on top of content */
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+}
+
