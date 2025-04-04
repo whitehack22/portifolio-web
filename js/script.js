@@ -28,21 +28,44 @@ const revealSections = () => {
 
 document.addEventListener("scroll", revealSections);
 document.addEventListener("DOMContentLoaded", revealSections);
-document.querySelector('#contact-form').addEventListener('submit', function (event) {
+
+// Initialize EmailJS with your User ID
+emailjs.init('c98ZU6jbEl5wKJ0lx'); // ✅ Replace with your actual user ID
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const formData = new FormData(event.target);
+    const formData = this;
+    const statusMessage = document.getElementById('status-message');
 
-    fetch('/send-email', {
-        method: 'POST',
-        body: formData,
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert('Your message has been sent!');
-        event.target.reset(); // Reset the form
-    })
-    .catch(error => {
-        alert('There was an error sending your message. Please try again.');
+    emailjs.sendForm('service_61ddjl2', 'template_0vs20v2', formData)
+    .then(function(response) {
+        statusMessage.innerHTML = 'Your message has been sent successfully!';
+        statusMessage.style.color = 'green';
+        formData.reset();
+    }, function(error) {
+        statusMessage.innerHTML = 'Error sending message. Please try again later.';
+        statusMessage.style.color = 'red';
     });
 });
+
+const button = this.querySelector("button");
+button.disabled = true;
+button.textContent = "Sending...";
+
+emailjs.sendForm('service_61ddjl2', 'template_0vs20v2', formData)
+.then(function(response) {
+    statusMessage.innerHTML = 'Your message has been sent successfully!';
+    statusMessage.style.color = 'green';
+    formData.reset();
+    button.disabled = false;
+    button.textContent = "Send";
+}, function(error) {
+    statusMessage.innerHTML = 'Error sending message. Please try again later.';
+    statusMessage.style.color = 'red';
+    button.disabled = false;
+    button.textContent = "Send";
+});
+
+
+
