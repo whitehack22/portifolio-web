@@ -383,8 +383,9 @@ footer p {
         position: absolute;
         top: 60px;
         right: 0;
-        width: 70%;
+        width: 60%;
         text-align: center;
+        border-radius: 3px;
         padding: 10px 0;
         z-index: 1000; /* Ensure menu is above other content */
     }

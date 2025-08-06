@@ -7,7 +7,9 @@ import { sendEmail } from './mailer.js';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://portifolio-web-red.vercel.app'
+}));
 app.use(bodyParser.json());
 
 app.get('/', (_req, res) => {

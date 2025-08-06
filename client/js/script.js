@@ -43,7 +43,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     button.textContent = "Sending...";
 
     try {
-        const res = await fetch('http://localhost:5000/send-email', {
+        const res = await fetch('https://portifolio-email-backend.onrender.com/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
