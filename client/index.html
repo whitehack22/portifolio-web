@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Mugo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <header>
+    <h1>Ryan Mugo Githaiga</h1>
+    <nav>
+        <button class="hamburger" onclick="toggleMenu()">☰</button> <!-- Hamburger Button -->
+        <ul id="nav-menu">
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Educational Background</a></li>
+            <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
+            <li><a href="#interests"><i class="fas fa-lightbulb"></i> Interests</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+</header>
+    
+    <section id="home">
+        <h2>Welcome to My Portfolio</h2>
+        <div class="about-content">
+            <img src="assets/images/DSC_6614.JPG" alt="Profile Picture" class="profile-pic">
+            <p>Hi, I'm Ryan Mugo, a Tech and Cybersecurity enthusiast passionate about solving problems through technology.</p>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a recent graduate with a Bachelors of Science in Applied Computing.I am very interested in Software Development, Artificial Intelligence, Cybersecurity and Networking. I believe that technology can be used to help secure businesses for example through fraud detection and encryption. I am open to work and gain experience.</p>
+    </section>
+        
+    <section id="education">
+        <h2>Educational Background</h2>
+        
+        <div class="education-entry">
+            <h3>Bachelor's Degree in Applied Computing</h3>
+            <p>KCA University, 2020 - 2024</p>
+            <p>Second Class Honours, Upper Division</p>
+        </div>
+    
+        <div class="education-entry">
+            <h3>K.C.S.E Certificate</h3>
+            <p>Starehe Boys Centre, 2016 - 2020</p>
+            <p>Grade: B+</p>
+        </div>
+    
+        <!-- Resume Subsection -->
+        <div id="resume">
+            <h3>Resume</h3>
+            <p>Download my resume by clicking the button below:</p>
+            <a href="assets/Curriculum Vitae.pdf" download="Resume.pdf" class="download-btn">Download Resume</a>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+             <div class="project-card">
+                <h3>Event Ticketing System</h3>
+                <p>This is a project that allows users to search and book events. It also allows users to pay for the events at a timely manner. The project was created
+                    by React library,Express and TypeScript.
+                </p>
+                <div class="project-buttons">
+                    <a href="https://github.com/whitehack22/event_ticketing_system" target="_blank" class="github-btn">GitHub</a>
+                    <a href="https://event-ticketing-system-sigma.vercel.app/" target="_blank" class="demo-btn">Live Demo</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Car Rental Management System</h3>
+                <p>This is a project that allows users to rent cars at an affordable price. The project was created
+                    by React library,Express and TypeScript.
+                </p>
+                <div class="project-buttons">
+                    <a href="https://github.com/whitehack22/car_rental_app" target="_blank" class="github-btn">GitHub</a>
+                    <a href="https://car-rental-app-one.vercel.app/" target="_blank" class="demo-btn">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li><i class="fas fa-code"></i> HTML, CSS, JavaScript, TypeScript</li>
+            <li><i class="fas fa-laptop-code"></i>React, Tailwind CSS, Bootstrap</li>
+            <li><i class="fas fa-database"></i> MySQL, Firebase</li>
+            <li><i class="fas fa-server"></i> Backend Development, Express Framework</li>
+            <li><i class="fa-solid fa-vial"></i> Software Testing, Unit Tests, Integration Tests, Performance Tests, End to End Tests</li>
+            <li><i class="fas fa-shield-alt"></i> Cybersecurity & Networking Essentials</li>
+        </ul>
+    </section>
+
+    <section id="interests">
+        <h2>Interests</h2>
+        <ul class="interests-list">
+            <li><i class="fas fa-gamepad"></i> Playing Video Games</li>
+            <li><i class="fas fa-user-secret"></i> Cybersecurity & Ethical Hacking</li>
+            <li><i class="fas fa-book"></i> Learning New Technologies</li>
+            <li><i class="fas fa-film"></i> Watching Anime (*Naruto*, *Hunter x Hunter*)</li>
+            <li><i class="fas fa-music"></i> Listening to Music</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+            <div id="status-message"></div>
+        </form>
+    </section>
+    
+
+    <footer>
+        <p>Follow me on:</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ryan-githaiga" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/whitehack22" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+        <p>&copy; 2025 Made by Ryan Mugo. All rights reserved.</p>
+    </footer>
+    
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
